@@ -12,7 +12,7 @@ public class isValidAnagram {
 
         Arrays.sort(arr1);
         Arrays.sort(arr2);
-        
+
         for (int i = 0; i < arr1.length && arr1.length == arr2.length; i++) {
             if (arr1[i] != arr2[i]) {
                 isValidAnagram = false;
@@ -22,9 +22,9 @@ public class isValidAnagram {
             }
         }
 
-        if(isValidAnagram){
+        if (isValidAnagram) {
             System.out.println("Anagram");
-        }else{
+        } else {
             System.out.println("Not a Anagram");
         }
 

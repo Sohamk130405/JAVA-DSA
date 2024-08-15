@@ -6,6 +6,265 @@
   "configurations": [
     {
       "type": "java",
+      "name": "interleaveQueue",
+      "request": "launch",
+      "mainClass": "Queues.Problems.interleaveQueue",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
+      "name": "negativeWindow",
+      "request": "launch",
+      "mainClass": "Queues.Problems.negativeWindow",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
+      "name": "reverseQueues",
+      "request": "launch",
+      "mainClass": "Queues.Problems.reverseQueues",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
+      "name": "deque",
+      "request": "launch",
+      "mainClass": "Queues.Basics.deque",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
+      "name": "CircularArrayQueue",
+      "request": "launch",
+      "mainClass": "Queues.Implementation.CircularArrayQueue",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
+      "name": "LinkedListImplementation",
+      "request": "launch",
+      "mainClass": "Queues.Implementation.LinkedListImplementation",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
+      "name": "ArrayImplementation",
+      "request": "launch",
+      "mainClass": "Queues.Implementation.ArrayImplementation",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
+      "name": "basicSTL",
+      "request": "launch",
+      "mainClass": "Queues.Basics.basicSTL",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
+      "name": "slidingWindowMaximum",
+      "request": "launch",
+      "mainClass": "Stacks.Problems.slidingWindowMaximum",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
+      "name": "celebrity",
+      "request": "launch",
+      "mainClass": "Stacks.Problems.celebrity",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
+      "name": "postfixToInfix",
+      "request": "launch",
+      "mainClass": "Stacks.Problems.postfixToInfix",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
+      "name": "prefixToInfix",
+      "request": "launch",
+      "mainClass": "Stacks.Problems.prefixToInfix",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
+      "name": "postfixToPrefix",
+      "request": "launch",
+      "mainClass": "Stacks.Problems.postfixToPrefix",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
+      "name": "prefixToPostfix",
+      "request": "launch",
+      "mainClass": "Stacks.Problems.prefixToPostfix",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
+      "name": "evaluatePrefix",
+      "request": "launch",
+      "mainClass": "Stacks.Problems.evaluatePrefix",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
+      "name": "evaluatePostfix",
+      "request": "launch",
+      "mainClass": "Stacks.Problems.evaluatePostfix",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
+      "name": "postfix",
+      "request": "launch",
+      "mainClass": "Stacks.Problems.postfix",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
+      "name": "prefix",
+      "request": "launch",
+      "mainClass": "Stacks.Problems.prefix",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
+      "name": "infix",
+      "request": "launch",
+      "mainClass": "Stacks.Problems.infix",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
+      "name": "largestAreaOfHistogram",
+      "request": "launch",
+      "mainClass": "Stacks.Problems.largestAreaOfHistogram",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
+      "name": "previsousGreaterElement",
+      "request": "launch",
+      "mainClass": "Stacks.Problems.previsousGreaterElement",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
+      "name": "stockSpan",
+      "request": "launch",
+      "mainClass": "Stacks.Problems.stockSpan",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
+      "name": "nextGreaterElement",
+      "request": "launch",
+      "mainClass": "Stacks.Problems.nextGreaterElement",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
+      "name": "removeConsecutiveSubsequences",
+      "request": "launch",
+      "mainClass": "Stacks.Problems.removeConsecutiveSubsequences",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
+      "name": "balancedBrackets",
+      "request": "launch",
+      "mainClass": "Stacks.Problems.balancedBrackets",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
+      "name": "Stack",
+      "request": "launch",
+      "mainClass": "Stacks.LinkedListImplementation.Stack",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
+      "name": "Stack",
+      "request": "launch",
+      "mainClass": "Stacks.ArrayImplementation.Stack",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
+      "name": "reverseStack",
+      "request": "launch",
+      "mainClass": "Stacks.reverseStack",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
+      "name": "print",
+      "request": "launch",
+      "mainClass": "Stacks.print",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
+      "name": "insertion",
+      "request": "launch",
+      "mainClass": "Stacks.insertion",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
+      "name": "copyStack",
+      "request": "launch",
+      "mainClass": "Stacks.copyStack",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
+      "name": "basic",
+      "request": "launch",
+      "mainClass": "Stacks.basic",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
+      "name": "doublyLinkedList",
+      "request": "launch",
+      "mainClass": "DoublyLinkedList.doublyLinkedList",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
+      "name": "HappyNumber",
+      "request": "launch",
+      "mainClass": "LinkedList.HappyNumber",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
+      "name": "implementationLL",
+      "request": "launch",
+      "mainClass": "LinkedList.implementationLL",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
+      "name": "shallowCopyOfNode",
+      "request": "launch",
+      "mainClass": "LinkedList.shallowCopyOfNode",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
+      "name": "basic",
+      "request": "launch",
+      "mainClass": "LinkedList.basic",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
       "name": "quick_select",
       "request": "launch",
       "mainClass": "Sorting.QuickSort.quick_select",
