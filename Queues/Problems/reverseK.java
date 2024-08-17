@@ -15,7 +15,7 @@ public class reverseK {
 
         System.out.println(q);
 
-        int n = q.size();
+        int n = q.size(); 
         int k = 3;
         
         for (int i = 0; i < 3; i++) {

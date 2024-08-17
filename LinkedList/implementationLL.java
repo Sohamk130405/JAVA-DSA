@@ -1,5 +1,4 @@
 package LinkedList;
-import java.util.ArrayList;
 
 class LinkedList {
     Node head;
@@ -283,7 +282,7 @@ class LinkedList {
         return merge(a, b);
 
     }
-    
+
     Node sort(Node head) {
         if (head == null || head.next == null)
             return head;
@@ -300,8 +299,8 @@ class LinkedList {
         secondHalf = sort(secondHalf);
         return merge(firstHalf, secondHalf);
     }
-    
-    void reverse(){
+
+    void reverse() {
         if (head == null || head.next == null)
             return;
         Node prev = null;
@@ -318,7 +317,8 @@ class LinkedList {
     }
 
     void reorderList() {
-        if(head == null || head.next==null) return;
+        if (head == null || head.next == null)
+            return;
         Node a = new Node(-1);
         Node b = new Node(-1);
         Node t1 = a;
@@ -341,8 +341,8 @@ class LinkedList {
             n++;
         }
 
-        a=a.next;
-        b=b.next;
+        a = a.next;
+        b = b.next;
         t1.next = b;
     }
 }
@@ -355,8 +355,8 @@ public class implementationLL {
         list.insertAtEnd(3);
         list.insertAtEnd(4);
         list.insertAtEnd(5);
-        ArrayList<Integer> arr = new ArrayList<>();
-        
+        // ArrayList<Integer> arr = new ArrayList<>();
+
         // list.insertAtStart(6);
         // list.insert(1, 8);
         // list.display();
@@ -370,8 +370,8 @@ public class implementationLL {
         // System.out.println(list.size());
 
         list.display();
-        Node temp = list.head;
-        Node temp2 = list.head;
+        // Node temp = list.head;
+        // Node temp2 = list.head;
         list.reorderList();
         list.display();
         // list.middleOfLinkedList();
