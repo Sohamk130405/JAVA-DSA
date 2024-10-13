@@ -6,6 +6,27 @@
   "configurations": [
     {
       "type": "java",
+      "name": "twoSum",
+      "request": "launch",
+      "mainClass": "HashMap.twoSum",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
+      "name": "basic",
+      "request": "launch",
+      "mainClass": "basic",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
+      "name": "basic",
+      "request": "launch",
+      "mainClass": "HashSet.basic",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
       "name": "rightSideView",
       "request": "launch",
       "mainClass": "BinaryTree.rightSideView",
