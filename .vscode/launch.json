@@ -6,6 +6,69 @@
   "configurations": [
     {
       "type": "java",
+      "name": "rightSideView",
+      "request": "launch",
+      "mainClass": "BinaryTree.rightSideView",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
+      "name": "iterativeTraversals",
+      "request": "launch",
+      "mainClass": "BinaryTree.iterativeTraversals",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
+      "name": "levelOrder",
+      "request": "launch",
+      "mainClass": "BinaryTree.levelOrder",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
+      "name": "nthLevelElements",
+      "request": "launch",
+      "mainClass": "BinaryTree.nthLevelElements",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
+      "name": "Traversals",
+      "request": "launch",
+      "mainClass": "BinaryTree.Traversals",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
+      "name": "invertTree",
+      "request": "launch",
+      "mainClass": "BinaryTree.invertTree",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
+      "name": "PreorderTraversals",
+      "request": "launch",
+      "mainClass": "BinaryTree.PreorderTraversals",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
+      "name": "Tree",
+      "request": "launch",
+      "mainClass": "BinaryTree.Tree",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
+      "name": "basic",
+      "request": "launch",
+      "mainClass": "Sorting.CyclicSort.basic",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
       "name": "interleaveQueue",
       "request": "launch",
       "mainClass": "Queues.Problems.interleaveQueue",
