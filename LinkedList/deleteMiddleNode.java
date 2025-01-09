@@ -1,7 +1,7 @@
 package LinkedList;
 
-class Solution {
-    public Node deleteMiddle(Node head) {
+class deleteMiddle {
+    public Node main(Node head) {
         if (head.next == null) {
             return null;
         }

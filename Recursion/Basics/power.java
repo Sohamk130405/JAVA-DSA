@@ -1,6 +1,5 @@
 package Recursion.Basics;
 
-
 public class power {
     public static void main(String[] args) {
         int a = 3;
@@ -18,17 +17,18 @@ public class power {
 
     private static int efficientPower(int a, int b) {
         // T.C = O(log(b))
-        if (b == 0 || b == 1)
+        if (b == 0)
             return 1;
-        else{
-            int ans = pow(a,b/2);
-            if(b%2==0){
-                return ans*ans;
-            }else{
-                return ans * ans*a;
+        if (b == 1)
+            return a;
+        else {
+            int ans = efficientPower(a, b / 2);
+            if (b % 2 == 0) {
+                return ans * ans;
+            } else {
+                return ans * ans * a;
             }
         }
 
-        
     }
 }

@@ -1,7 +1,7 @@
 package LinkedList;
 
-class Solution {
-    public Node removeNthFromEnd(Node head, int n) {
+class removeNthFromEnd {
+    public Node main(Node head, int n) {
         if (head.next == null)
             return null;
 

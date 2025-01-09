@@ -6,6 +6,125 @@
   "configurations": [
     {
       "type": "java",
+      "name": "basic",
+      "request": "launch",
+      "mainClass": "Heaps.implementation.basic",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
+      "name": "minimumCost",
+      "request": "launch",
+      "mainClass": "Heaps.minimumCost",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
+      "name": "frequencySort",
+      "request": "launch",
+      "mainClass": "Heaps.frequencySort",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
+      "name": "kElement",
+      "request": "launch",
+      "mainClass": "Heaps.kElement",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
+      "name": "kElement",
+      "request": "launch",
+      "mainClass": "Heap.kElement",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
+      "name": "basic",
+      "request": "launch",
+      "mainClass": "Heap.basic",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
+      "name": "infix",
+      "request": "launch",
+      "mainClass": "Stacks.InfixPostfixAndPrefix.Evaluate.infix",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
+      "name": "Program1",
+      "request": "launch",
+      "mainClass": "Program1",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
+      "name": "SalesCommission",
+      "request": "launch",
+      "mainClass": "SalesCommission",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
+      "name": "xyz",
+      "request": "launch",
+      "mainClass": "xyz",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
+      "name": "power",
+      "request": "launch",
+      "mainClass": "Recursion.Basics.power",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
+      "name": "uniqueLength3Palindrome",
+      "request": "launch",
+      "mainClass": "HashMap.uniqueLength3Palindrome",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
+      "name": "nicePairs",
+      "request": "launch",
+      "mainClass": "HashMap.nicePairs",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
+      "name": "topView",
+      "request": "launch",
+      "mainClass": "BinaryTree.Traversal.topView",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
+      "name": "arrayPairsAreDivisibleByK",
+      "request": "launch",
+      "mainClass": "HashMap.arrayPairsAreDivisibleByK",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
+      "name": "lengthOfLongestSubstring",
+      "request": "launch",
+      "mainClass": "HashMap.lengthOfLongestSubstring",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
+      "name": "evenNumber",
+      "request": "launch",
+      "mainClass": "HashMap.evenNumber",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
       "name": "twoSum",
       "request": "launch",
       "mainClass": "HashMap.twoSum",

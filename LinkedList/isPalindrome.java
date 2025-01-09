@@ -1,8 +1,8 @@
 package LinkedList;
 
 
-class Solution {
-    public boolean isPalindrome(Node head) {
+class isPalindrome {
+    public boolean main(Node head) {
         if (head.next == null)
             return true;
         Node slow = head;
