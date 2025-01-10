@@ -1,4 +1,3 @@
-package Heaps;
 
 class Pair implements Comparable<Pair> {
     int d;

@@ -1,5 +1,3 @@
-package Heaps;
-
 import java.util.PriorityQueue;
 
 public class basic {

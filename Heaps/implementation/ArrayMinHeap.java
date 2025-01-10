@@ -1,4 +1,5 @@
-package Heaps.implementation;
+package implementation;
+
 
 public class ArrayMinHeap {
     // lc = 2p+1 , rc = 2p+2 , p =(c-1)/ 2

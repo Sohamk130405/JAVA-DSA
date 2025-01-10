@@ -1,8 +1,8 @@
-package Heaps.implementation;
+package implementation;
 
 public class basic {
     public static void main(String[] args) {
-        ArrayHeap pq = new ArrayHeap(5);
+        ArrayMinHeap pq = new ArrayMinHeap(5);
         pq.add(3);
         pq.add(10);
         pq.add(7);

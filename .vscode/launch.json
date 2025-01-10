@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "CheckBSTForMaxHeap",
+      "request": "launch",
+      "mainClass": "Heaps.CheckBSTForMaxHeap",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
       "name": "basic",
       "request": "launch",
       "mainClass": "Heaps.implementation.basic",

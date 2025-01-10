@@ -1,4 +1,3 @@
-package Heaps;
 import java.util.PriorityQueue;
 public class minimumCost {
     public static void main(String[] args) {

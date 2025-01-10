@@ -1,4 +1,3 @@
-package Heaps;
 class Triplet implements Comparable<Triplet> {
     int d;
     int x;
