@@ -27,10 +27,14 @@ public class ArrayImplementation {
             if (size == 0) {
                 System.out.println("Queue is empty!");
                 return -1;
+            } else if (f==r) {
+                f = r = -1;
+                size--;
+                return arr[0];
+            } else {
+                size--;
+                return arr[f++];
             }
-            f++;
-            size--;
-            return arr[f - 1];
         }
 
         public int peek() {
@@ -64,9 +68,32 @@ public class ArrayImplementation {
         q.add(1);
         q.add(2);
         q.add(3);
+        q.add(4);
+        q.add(5);
+        q.remove();
+        q.display();
+        q.remove();
+        q.display();
+        q.remove();
+        q.display();
         q.remove();
         q.display();
         System.out.println(q.isEmpty());
         System.out.println(q.peek());
+
+        // for (int i = 0; i < 100; i++) {
+        //     q.add(i);
+        // }
+        // for (int i = 0; i < 100; i++) {
+        //     q.remove();
+        // }
+        // for (int i = 0; i < 100; i++) {
+        //     q.add(i);
+        // }
+        // for (int i = 0; i < 100; i++) {
+        //     q.remove();
+        // }
+        // q.display();
+        // System.out.println(q.size);
     }
 }

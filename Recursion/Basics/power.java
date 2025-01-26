@@ -8,12 +8,12 @@ public class power {
         System.out.println(efficientPower(a, b));
     }
 
-    private static int pow(int a, int b) {
-        // T.C = O(b)
-        if (b == 0)
-            return 1;
-        return a * pow(a, b - 1);
-    }
+    // private static int pow(int a, int b) {
+    //     // T.C = O(b)
+    //     if (b == 0)
+    //         return 1;
+    //     return a * pow(a, b - 1);
+    // }
 
     private static int efficientPower(int a, int b) {
         // T.C = O(log(b))

@@ -6,6 +6,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "basic",
+      "request": "launch",
+      "mainClass": "implementation.basic",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
+      "name": "GrumpyBookstore",
+      "request": "launch",
+      "mainClass": "GrumpyBookstore",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
       "name": "CheckBSTForMaxHeap",
       "request": "launch",
       "mainClass": "Heaps.CheckBSTForMaxHeap",
