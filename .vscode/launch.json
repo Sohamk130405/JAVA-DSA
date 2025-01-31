@@ -6,6 +6,34 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Tabulation",
+      "request": "launch",
+      "mainClass": "DynamicProgramming.Tabulation",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
+      "name": "Memoization",
+      "request": "launch",
+      "mainClass": "DynamicProgramming.Memoization",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
+      "name": "Graph",
+      "request": "launch",
+      "mainClass": "AI.Graph",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
+      "name": "Friends",
+      "request": "launch",
+      "mainClass": "DynamicProgramming.Friends",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
       "name": "basic",
       "request": "launch",
       "mainClass": "implementation.basic",

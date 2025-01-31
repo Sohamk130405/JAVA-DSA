@@ -15,8 +15,7 @@ public class Memoization {
     static int[][] dp2;
 
     public static void main(String[] args) {
-        int[] arr = { 8, 1, 5, 4 };
-        System.out.println(subsetSum(arr, 100));
+        
     }
 
     // Fibonacci Number
@@ -104,7 +103,7 @@ public class Memoization {
     }
 
     // Count number of dearrangements
-    static int countDearrangements(int n) {
+    public int countDearrangements(int n) {
         if (n <= 3)
             return n - 1;
         dp = new int[n + 1];
@@ -112,7 +111,7 @@ public class Memoization {
         return countDer(n);
     }
 
-    static int countDer(int n) {
+    public int countDer(int n) {
         if (n <= 3)
             return n - 1;
         if (dp[n] != -1)
@@ -226,7 +225,27 @@ public class Memoization {
         return dp2[i][C] = Math.max(skip, pick);
     }
 
-    public static boolean subsetSum(int[] arr, int target) {
+    public  int unboundedKnapsack(int[] wt, int[] val, int capacity) {
+        dp2 = new int[wt.length][capacity + 1];
+        for (int i = 0; i < wt.length; i++) {
+            Arrays.fill(dp2[i], -1);
+        }
+        return unboundedProfit(0, wt, val, capacity);
+    }
+
+    public  int unboundedProfit(int i, int[] wt, int[] val, int C) {
+        if (i == wt.length)
+            return 0;
+        if (dp2[i][C] != -1)
+            return dp2[i][C];
+        int skip = unboundedProfit(i + 1, wt, val, C);
+        if (wt[i] > C)
+            return dp2[i][C] = skip;
+        int pick = val[i] + unboundedProfit(i, wt, val, C - wt[i]);
+        return dp2[i][C] = Math.max(skip, pick);
+    }
+
+    public  boolean subsetSum(int[] arr, int target) {
         dp2 = new int[arr.length][target + 1];
         for (int i = 0; i < dp2.length; i++) {
             Arrays.fill(dp2[i], -1);
@@ -234,7 +253,7 @@ public class Memoization {
         return isSubsetFound(0, arr, target);
     }
 
-    public static boolean isSubsetFound(int i, int[] arr, int target) {
+    public  boolean isSubsetFound(int i, int[] arr, int target) {
         if (i == arr.length) {
             if (target == 0)
                 return true;
@@ -306,6 +325,53 @@ public class Memoization {
         int add = findWays(i + 1, arr, target, res - arr[i]);
         int sub = findWays(i + 1, arr, target, res + arr[i]);
         return dp2[i][res + sum] = add + sub;
+    }
+
+    public int longestCommonSubsequence(String text1, String text2) {
+        StringBuilder a = new StringBuilder(text1);
+        StringBuilder b = new StringBuilder(text2);
+        int m = a.length(), n = b.length();
+        dp2 = new int[m][n];
+        for (int i = 0; i < m; i++) {
+            Arrays.fill(dp2[i], -1);
+        }
+        return LCS(a, b, m, n);
+    }
+
+    public int LCS(StringBuilder a, StringBuilder b, int m, int n) {
+        if (m == 0 || n == 0)
+            return 0;
+        if (dp2[m - 1][n - 1] != -1)
+            return dp2[m - 1][n - 1];
+        if (a.charAt(m - 1) == b.charAt(n - 1))
+            return dp2[m - 1][n - 1] = 1 + LCS(a, b, m - 1, n - 1);
+        return dp2[m - 1][n - 1] = Math.max(LCS(a, b, m, n - 1), LCS(a, b, m - 1, n));
+    }
+
+    public int coinChange(int[] coins, int amount) {
+        long[][] dp;
+        dp = new long[coins.length][amount + 1];
+        for (int i = 0; i < coins.length; i++) {
+            Arrays.fill(dp[i], -1);
+        }
+        int ans = (int) coins(0, coins, amount, dp);
+        return ans == Integer.MAX_VALUE ? -1 : ans;
+    }
+
+    public long coins(int i, int[] coins, int amount, long[][] dp) {
+        if (i == coins.length) {
+            if (amount == 0)
+                return 0;
+            else
+                return Integer.MAX_VALUE;
+        }
+        if (dp[i][amount] != -1)
+            return dp[i][amount];
+        long skip = coins(i + 1, coins, amount, dp);
+        if (coins[i] > amount)
+            return dp[i][amount] = skip;
+        long pick = 1 + coins(i, coins, amount - coins[i], dp);
+        return dp[i][amount] = Math.min(skip, pick);
     }
 
 }

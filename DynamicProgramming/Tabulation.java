@@ -6,7 +6,10 @@ package DynamicProgramming;
 // Iterative DP
 public class Tabulation {
     public static void main(String[] args) {
-
+        int[] wt = { 5, 3, 9, 16 };
+        int[] val = { 1, 2, 8, 10 };
+        int C = 8;
+        System.out.println(Knapsack(val, wt, C));
     }
 
     public int fib(int n) {
@@ -139,7 +142,7 @@ public class Tabulation {
         }
         return count;
     }
-    
+
     public int numSquares(int n) {
         int sqrt = (int) Math.sqrt(n);
         if (sqrt * sqrt == n)
@@ -159,5 +162,72 @@ public class Tabulation {
             }
         }
         return dp[n];
+    }
+
+    // 0/1 Knapsack
+    public static int Knapsack(int[] wt, int[] val, int C) {
+        int n = wt.length;
+        int dp[][] = new int[n][C + 1];
+        for (int i = 0; i < n; i++) {
+            for (int c = 0; c <= C; c++) {
+                int skip = (i > 0) ? dp[i - 1][c] : 0;
+                if (wt[i] > c)
+                    dp[i][c] = skip;
+                else {
+                    int pick = val[i] + (i > 0 ? dp[i - 1][c - wt[i]] : 0);
+                    dp[i][c] = Math.max(skip, pick);
+                }
+            }
+        }
+
+        return dp[n - 1][C];
+    }
+
+    public static boolean subsetSum(int[] arr, int target) {
+        int[][] dp = new int[arr.length][target + 1];
+
+        for (int i = 0; i < dp.length; i++) {
+            for (int j = 0; j <= target; j++) {
+                boolean ans = false;
+                boolean skip = (i > 0) ? dp[i - 1][j] == 1 : j == 0;
+                if (arr[i] > target)
+                    ans = skip;
+                else {
+                    boolean pick = ((i > 0) ? dp[i - 1][j - arr[i]] == 1 : j == 0);
+                    ans = pick || skip;
+                }
+                dp[i][j] = ans ? 1 : 0;
+            }
+        }
+        return dp[arr.length - 1][target] == 1;
+    }
+
+    public int LCS(String a, String b) {
+        int m = a.length(), n = b.length();
+        int dp[][] = new int[m][n];
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                if (a.charAt(i) == b.charAt(j))
+                    dp[i][j] = 1 + ((i > 0 && j > 0) ? dp[i - 1][j - 1] : 0);
+                else
+                    dp[i][j] = Math.max((i > 0) ? dp[i - 1][j] : 0, (j > 0) ? dp[i][j - 1] : 0);
+            }
+        }
+        return dp[m - 1][n - 1];
+    }
+    // Space Optimized;
+    public int longestCommonSubsequence(String a, String b) {
+        int m = a.length(), n = b.length();
+        int dp[][] = new int[2][n + 1];
+        for (int i = 1; i <= m; i++) {
+            for (int j = 1; j <= n; j++) {
+                if (a.charAt(i - 1) == b.charAt(j - 1))
+                    dp[1][j] = 1 + (dp[0][j - 1]);
+                else
+                    dp[1][j] = Math.max(dp[0][j], dp[1][j - 1]);
+            }
+            System.arraycopy(dp[1], 0, dp[0], 0, n + 1);
+        }
+        return dp[1][n];
     }
 }
