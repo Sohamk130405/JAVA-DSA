@@ -215,6 +215,7 @@ public class Tabulation {
         }
         return dp[m - 1][n - 1];
     }
+
     // Space Optimized;
     public int longestCommonSubsequence(String a, String b) {
         int m = a.length(), n = b.length();
@@ -229,5 +230,69 @@ public class Tabulation {
             System.arraycopy(dp[1], 0, dp[0], 0, n + 1);
         }
         return dp[1][n];
+    }
+
+    // Delete Operation For Two Strings
+    public int deleteForTwoStrings(String a, String b) {
+        int m = a.length(), n = b.length();
+        int[][] dp = new int[m][n];
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                if (a.charAt(i) == b.charAt(j))
+                    dp[i][j] = 1 + ((i > 0 && j > 0) ? dp[i - 1][j - 1] : 0);
+                else
+                    dp[i][j] = Math.max((j > 0) ? dp[i][j - 1] : 0, (i > 0) ? dp[i - 1][j] : 0);
+            }
+        }
+        return m + n - 2 * dp[m - 1][n - 1];
+    }
+    // Edit Distance
+    public int editDistance(String a, String b) {
+        int m = a.length(), n = b.length();
+        int[][] dp = new int[m + 1][n + 1];
+        for (int i = 0; i <= m; i++)
+            dp[i][0] = i;
+        for (int j = 0; j <= n; j++)
+            dp[0][j] = j;
+
+        for (int i = 1; i <= m; i++) {
+            for (int j = 1; j <= n; j++) {
+                if (a.charAt(i - 1) == b.charAt(j - 1))
+                    dp[i][j] = dp[i - 1][j - 1];
+                else {
+                    int rep = dp[i - 1][j - 1];
+                    int del = dp[i - 1][j];
+                    int ins = dp[i][j - 1];
+                    dp[i][j] = 1 + Math.min(Math.min(rep, del), ins);
+                }
+            }
+        }
+        return dp[m][n];
+    }
+    // minimum insertion
+    public int minInsertions(String a) {
+        String b = reverse(a);
+        int m = a.length();
+        return m - LCS(a,b);
+    }
+    public String reverse(String s) {
+        StringBuilder b = new StringBuilder(s);
+        b = b.reverse();
+        return b.toString();
+    }
+    //longest-palindromic-subsequence
+    public int LPS(String a) {
+        String b = reverse(a);
+        int m = a.length(), n = b.length();
+        int dp[][] = new int[m][n];
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                if (a.charAt(i) == b.charAt(j))
+                    dp[i][j] = 1 + ((i > 0 && j > 0) ? dp[i - 1][j - 1] : 0);
+                else
+                    dp[i][j] = Math.max((i > 0) ? dp[i - 1][j] : 0, (j > 0) ? dp[i][j - 1] : 0);
+            }
+        }
+        return dp[m - 1][n - 1];
     }
 }

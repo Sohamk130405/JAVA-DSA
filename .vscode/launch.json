@@ -6,6 +6,48 @@
   "configurations": [
     {
       "type": "java",
+      "name": "LCSubstring",
+      "request": "launch",
+      "mainClass": "DynamicProgramming.String.LCSubstring",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
+      "name": "PalindromicSubstrings",
+      "request": "launch",
+      "mainClass": "DynamicProgramming.String.PalindromicSubstrings",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
+      "name": "LCS",
+      "request": "launch",
+      "mainClass": "DynamicProgramming.String.LCS",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
+      "name": "Supersequence",
+      "request": "launch",
+      "mainClass": "DynamicProgramming.String.Supersequence",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
+      "name": "PrintLCS",
+      "request": "launch",
+      "mainClass": "DynamicProgramming.String.PrintLCS",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
+      "name": "UniqueBST",
+      "request": "launch",
+      "mainClass": "DynamicProgramming.BinaryTree.UniqueBST",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
       "name": "Tabulation",
       "request": "launch",
       "mainClass": "DynamicProgramming.Tabulation",

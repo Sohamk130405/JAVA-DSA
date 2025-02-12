@@ -1,9 +1,7 @@
 package DynamicProgramming;
 
 import java.util.Arrays;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 // Top Down DP Using Memoization Technique
 // Time Complexity: O(n)
@@ -15,7 +13,7 @@ public class Memoization {
     static int[][] dp2;
 
     public static void main(String[] args) {
-        
+
     }
 
     // Fibonacci Number
@@ -225,27 +223,8 @@ public class Memoization {
         return dp2[i][C] = Math.max(skip, pick);
     }
 
-    public  int unboundedKnapsack(int[] wt, int[] val, int capacity) {
-        dp2 = new int[wt.length][capacity + 1];
-        for (int i = 0; i < wt.length; i++) {
-            Arrays.fill(dp2[i], -1);
-        }
-        return unboundedProfit(0, wt, val, capacity);
-    }
-
-    public  int unboundedProfit(int i, int[] wt, int[] val, int C) {
-        if (i == wt.length)
-            return 0;
-        if (dp2[i][C] != -1)
-            return dp2[i][C];
-        int skip = unboundedProfit(i + 1, wt, val, C);
-        if (wt[i] > C)
-            return dp2[i][C] = skip;
-        int pick = val[i] + unboundedProfit(i, wt, val, C - wt[i]);
-        return dp2[i][C] = Math.max(skip, pick);
-    }
-
-    public  boolean subsetSum(int[] arr, int target) {
+    
+    public boolean subsetSum(int[] arr, int target) {
         dp2 = new int[arr.length][target + 1];
         for (int i = 0; i < dp2.length; i++) {
             Arrays.fill(dp2[i], -1);
@@ -253,7 +232,7 @@ public class Memoization {
         return isSubsetFound(0, arr, target);
     }
 
-    public  boolean isSubsetFound(int i, int[] arr, int target) {
+    public boolean isSubsetFound(int i, int[] arr, int target) {
         if (i == arr.length) {
             if (target == 0)
                 return true;
@@ -327,6 +306,7 @@ public class Memoization {
         return dp2[i][res + sum] = add + sub;
     }
 
+    // Longest Common Subsequence
     public int longestCommonSubsequence(String text1, String text2) {
         StringBuilder a = new StringBuilder(text1);
         StringBuilder b = new StringBuilder(text2);
@@ -346,6 +326,85 @@ public class Memoization {
         if (a.charAt(m - 1) == b.charAt(n - 1))
             return dp2[m - 1][n - 1] = 1 + LCS(a, b, m - 1, n - 1);
         return dp2[m - 1][n - 1] = Math.max(LCS(a, b, m, n - 1), LCS(a, b, m - 1, n));
+    }
+
+    // Longest Common Palindrome Subsequence
+    public int longestPalindromeSubseq(String s) {
+        StringBuilder a = new StringBuilder(s);
+        int m = a.length();
+        dp2 = new int[m][m];
+        for (int i = 0; i < m; i++) {
+            Arrays.fill(dp2[i], -1);
+        }
+        return LPS(a, m, 0);
+    }
+
+    public int LPS(StringBuilder a, int m, int n) {
+        if (m == 0 || n == a.length())
+            return 0;
+        if (dp2[m - 1][n] != -1)
+            return dp2[m - 1][n];
+        if (a.charAt(m - 1) == a.charAt(n))
+            return dp2[m - 1][n] = 1 + LPS(a, m - 1, n + 1);
+        return dp2[m - 1][n] = Math.max(LPS(a, m, n + 1), LPS(a, m - 1, n));
+    }
+
+    // Delete Operation For 2 Strings
+    public int minDistance(String word1, String word2) {
+        StringBuilder a = new StringBuilder(word1);
+        StringBuilder b = new StringBuilder(word2);
+        int m = a.length(), n = b.length();
+        dp2 = new int[m][n];
+        for (int i = 0; i < m; i++) {
+            Arrays.fill(dp2[i], -1);
+        }
+        return m + n - 2 * LCS(a, b, m, n);
+    }
+
+    public int editDistance(String word1, String word2) {
+        StringBuilder a = new StringBuilder(word1);
+        StringBuilder b = new StringBuilder(word2);
+        int m = a.length(), n = b.length();
+        dp2 = new int[m][n];
+        for (int i = 0; i < m; i++) {
+            Arrays.fill(dp2[i], -1);
+        }
+        return edit(a, b, m - 1, n - 1);
+    }
+
+    public int edit(StringBuilder a, StringBuilder b, int m, int n) {
+        if (m == -1)
+            return n + 1;
+        if (n == -1)
+            return m + 1;
+        if (dp2[m][n] != -1)
+            return dp2[m][n];
+        if (a.charAt(m) == b.charAt(n))
+            return dp2[m][n] = edit(a, b, m - 1, n - 1);
+        int rep = edit(a, b, m - 1, n - 1);
+        int del = edit(a, b, m - 1, n);
+        int ins = edit(a, b, m, n - 1);
+        return dp2[m][n] = 1 + Math.min(Math.min(rep, del), ins);
+    }
+   
+    public int unboundedKnapsack(int[] wt, int[] val, int capacity) {
+        dp2 = new int[wt.length][capacity + 1];
+        for (int i = 0; i < wt.length; i++) {
+            Arrays.fill(dp2[i], -1);
+        }
+        return unboundedProfit(0, wt, val, capacity);
+    }
+
+    public int unboundedProfit(int i, int[] wt, int[] val, int C) {
+        if (i == wt.length)
+            return 0;
+        if (dp2[i][C] != -1)
+            return dp2[i][C];
+        int skip = unboundedProfit(i + 1, wt, val, C);
+        if (wt[i] > C)
+            return dp2[i][C] = skip;
+        int pick = val[i] + unboundedProfit(i, wt, val, C - wt[i]);
+        return dp2[i][C] = Math.max(skip, pick);
     }
 
     public int coinChange(int[] coins, int amount) {
@@ -373,5 +432,5 @@ public class Memoization {
         long pick = 1 + coins(i, coins, amount - coins[i], dp);
         return dp[i][amount] = Math.min(skip, pick);
     }
-
+    
 }
