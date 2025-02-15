@@ -6,6 +6,34 @@
   "configurations": [
     {
       "type": "java",
+      "name": "NQueens",
+      "request": "launch",
+      "mainClass": "Backtracking.NQueens",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
+      "name": "MazePath3DeadBlocks",
+      "request": "launch",
+      "mainClass": "Backtracking.MazePath3DeadBlocks",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
+      "name": "MazePath4Directions",
+      "request": "launch",
+      "mainClass": "Backtracking.MazePath4Directions",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
+      "name": "MazePath4",
+      "request": "launch",
+      "mainClass": "Backtracking.MazePath4",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
       "name": "MinCostToCutStick",
       "request": "launch",
       "mainClass": "DynamicProgramming.Partition.MinCostToCutStick",
