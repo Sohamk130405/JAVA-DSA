@@ -6,6 +6,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "MinCostToCutStick",
+      "request": "launch",
+      "mainClass": "DynamicProgramming.Partition.MinCostToCutStick",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
+      "name": "MatricChainMultiplication",
+      "request": "launch",
+      "mainClass": "DynamicProgramming.Partition.MatricChainMultiplication",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
       "name": "LCSubstring",
       "request": "launch",
       "mainClass": "DynamicProgramming.String.LCSubstring",
