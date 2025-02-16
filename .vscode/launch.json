@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "MaximumKnights",
+      "request": "launch",
+      "mainClass": "Backtracking.MaximumKnights",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
       "name": "NQueens",
       "request": "launch",
       "mainClass": "Backtracking.NQueens",
