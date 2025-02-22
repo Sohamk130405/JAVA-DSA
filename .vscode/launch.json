@@ -6,6 +6,41 @@
   "configurations": [
     {
       "type": "java",
+      "name": "MinimumProductSubset",
+      "request": "launch",
+      "mainClass": "Greedy.MinimumProductSubset",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
+      "name": "FractionalKnapsack",
+      "request": "launch",
+      "mainClass": "Greedy.FractionalKnapsack",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
+      "name": "MaxSumKNegotiation",
+      "request": "launch",
+      "mainClass": "Greedy.MaxSumKNegotiation",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
+      "name": "AssignCookies",
+      "request": "launch",
+      "mainClass": "Greedy.AssignCookies",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
+      "name": "IndianCoinChange",
+      "request": "launch",
+      "mainClass": "Greedy.IndianCoinChange",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
       "name": "MaximumKnights",
       "request": "launch",
       "mainClass": "Backtracking.MaximumKnights",
