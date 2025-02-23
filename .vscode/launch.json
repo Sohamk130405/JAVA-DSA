@@ -6,6 +6,27 @@
   "configurations": [
     {
       "type": "java",
+      "name": "RightmostSetBit",
+      "request": "launch",
+      "mainClass": "BitManupulation.RightmostSetBit",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
+      "name": "Bitmasking",
+      "request": "launch",
+      "mainClass": "BitManupulation.Bitmasking",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
+      "name": "Binary",
+      "request": "launch",
+      "mainClass": "BitManupulation.Binary",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
       "name": "MinimumProductSubset",
       "request": "launch",
       "mainClass": "Greedy.MinimumProductSubset",
