@@ -42,5 +42,16 @@ public class PathExist {
             }
         }
 
+        public void dfs(List<List<Integer>> adj, int i, boolean[] isVisited, int end) {
+            isVisited[i] = true;
+            for (int ele : adj.get(i)) {
+                if (!isVisited[ele]) {
+                    isVisited[ele] = true;
+                    if (ele == end)
+                        return;
+                    dfs(adj, ele, isVisited, end);
+                }
+            }
+        }
     }
 }

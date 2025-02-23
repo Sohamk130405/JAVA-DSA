@@ -57,4 +57,17 @@ public class NumberOfIslands {
             }
         }
     }
+
+    public void dfs(char[][] grid, int i, int j, boolean[][] isVisited) {
+        int n = grid.length;
+        int m = grid[0].length;
+        if (i < 0 || j < 0 || i >= n || j >= m || isVisited[i][j] || grid[i][j] == '0') {
+            return;
+        }
+        isVisited[i][j] = true;
+        dfs(grid, i + 1, j, isVisited);
+        dfs(grid, i, j + 1, isVisited);
+        dfs(grid, i, j - 1, isVisited);
+        dfs(grid, i - 1, j, isVisited);
+    }
 }

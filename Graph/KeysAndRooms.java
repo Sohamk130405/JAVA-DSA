@@ -33,4 +33,13 @@ public class KeysAndRooms {
             }
         }
     }
+
+    public void dfs(List<List<Integer>> adj, int i, boolean[] isVisited) {
+        isVisited[i] = true;
+        for (int ele : adj.get(i)) {
+            if (!isVisited[ele]) {
+                dfs(adj, ele, isVisited);
+            }
+        }
+    }
 }

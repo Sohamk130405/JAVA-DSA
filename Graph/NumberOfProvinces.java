@@ -35,4 +35,13 @@ public class NumberOfProvinces {
             }
         }
     }
+
+    public static void dfs(int[][] adj, int i, boolean[] isVisited) {
+        isVisited[i] = true;
+        for (int j = 0; j < adj.length; j++) {
+            if (adj[i][j] == 1 && !isVisited[j]) {
+                dfs(adj, j, isVisited);
+            }
+        }
+    }
 }

@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "NumberOfProvinces",
+      "request": "launch",
+      "mainClass": "Graph.NumberOfProvinces",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
       "name": "RightmostSetBit",
       "request": "launch",
       "mainClass": "BitManupulation.RightmostSetBit",
