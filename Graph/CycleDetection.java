@@ -14,6 +14,7 @@ class Pair {
 }
 
 public class CycleDetection {
+    // For Undirected Graph
     public boolean bfs(List<List<Integer>> adj, int i, boolean[] isVisited) {
         Queue<Pair> q = new LinkedList<>();
         q.add(new Pair(i, -1));

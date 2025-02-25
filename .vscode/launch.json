@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "TopologicalSort",
+      "request": "launch",
+      "mainClass": "Graph.TopologicalSort",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
       "name": "NumberOfProvinces",
       "request": "launch",
       "mainClass": "Graph.NumberOfProvinces",
