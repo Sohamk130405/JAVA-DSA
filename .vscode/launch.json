@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "PrimsAlgo",
+      "request": "launch",
+      "mainClass": "Graph.PrimsAlgo",
+      "projectName": "Java_3ccbe8e7"
+    },
+    {
+      "type": "java",
       "name": "TopologicalSort",
       "request": "launch",
       "mainClass": "Graph.TopologicalSort",
