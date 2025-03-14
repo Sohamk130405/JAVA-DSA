@@ -3,6 +3,7 @@ package Graph.DisjointSetUnion;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Scanner;
 
 class Edge implements Comparable<Edge> {
 
@@ -23,7 +24,18 @@ public class KruskalAlgorithm {
     static int[] parent;
     static int[] size;
 
-    public void union(int a, int b) {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int[][] points = new int[n][2];
+        for (int i = 0; i < points.length; i++) {
+            points[i][0] = sc.nextInt();
+            points[i][1] = sc.nextInt();
+        }
+        System.out.println(minCostConnectPoints(points));
+    }
+
+    public static void union(int a, int b) {
         a = leader(a);
         b = leader(b);
         if (a != b) {
@@ -38,14 +50,14 @@ public class KruskalAlgorithm {
 
     }
 
-    public int leader(int a) {
+    public static int leader(int a) {
         if (parent[a] == a)
             return a;
         // path compression
         return parent[a] = leader(parent[a]);
     }
 
-    public int minCostConnectPoints(int[][] points) {
+    public static int minCostConnectPoints(int[][] points) {
         int n = points.length;
         int cost = 0;
 

@@ -2,17 +2,22 @@ package Backtracking;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class NQueens {
     public static void main(String[] args) {
-        solveNQueens(4);
+        System.out.print("Enter number of queens:");
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        System.out.println();
+        solveNQueens(n);
     }
 
     public static void solveNQueens(int n) {
         char[][] board = new char[n][n];
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
-                board[i][j] = 'X';
+                board[i][j] = '_';
             }
         }
         nqueens(board, 0);
@@ -27,7 +32,7 @@ public class NQueens {
             if (isSafe(board, row, j)) {
                 board[row][j] = 'Q';
                 nqueens(board, row + 1);
-                board[row][j] = 'X';
+                board[row][j] = '_';
             }
         }
     }
@@ -60,22 +65,22 @@ public class NQueens {
         }
         i = row;
         j = col;
-        while (i < n && j < n) {
-            if (board[i][j] == 'Q')
-                return false;
-            i++;
-            j++;
-        }
-        i = row;
-        j = col;
-        while (i < n && j >= 0) {
-            if (board[i][j] == 'Q')
-                return false;
-            i++;
-            j--;
-        }
-        i = row;
-        j = col;
+        // while (i < n && j < n) {
+        // if (board[i][j] == 'Q')
+        // return false;
+        // i++;
+        // j++;
+        // }
+        // i = row;
+        // j = col;
+        // while (i < n && j >= 0) {
+        // if (board[i][j] == 'Q')
+        // return false;
+        // i++;
+        // j--;
+        // }
+        // i = row;
+        // j = col;
         while (i >= 0 && j >= 0) {
             if (board[i][j] == 'Q')
                 return false;
@@ -86,6 +91,7 @@ public class NQueens {
     }
 
 }
+
 // NQueens 1
 class Solution {
     public List<List<String>> solveNQueens(int n) {

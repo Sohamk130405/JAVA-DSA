@@ -21,3 +21,32 @@ public class peakIndexOfMountain {
         System.out.println(idx);
     }
 }
+
+
+class Solution {
+    public int findPeakElement(int[] arr) {
+        int n = arr.length;
+        int idx = -1;
+        int lo = 1;
+        int hi = n - 2;
+        while (lo <= hi) {
+            int mid = (hi - lo) / 2 + lo;
+            if (arr[mid] > arr[mid + 1] && arr[mid] > arr[mid - 1]) {
+                idx = mid;
+                break;
+            } else if (arr[mid] < arr[mid - 1]) {
+                hi = mid - 1;
+            } else if (arr[mid] < arr[mid + 1]) {
+                lo = mid + 1;
+            }
+        }
+        if (idx == -1) {
+            if (arr[0] > arr[n - 1])
+                return 0;
+            else
+                return n - 1;
+        }
+        return idx;
+
+    }
+}
